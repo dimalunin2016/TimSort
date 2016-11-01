@@ -20,7 +20,7 @@ template <class RandomAccessIterator, class Compare>
                 ++i;
                 std::reverse(begin, i);
             }
-            if (run < minrun)
+            if (run < minrun || last - i <= minrun)
             {
                 RandomAccessIterator start = i;
                 for (;i != last && i != (begin + minrun); ++i) {
